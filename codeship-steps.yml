@@ -1,4 +1,4 @@
 - name: polaris_build
   service: polaris
-  command: polaris analyze
+  command: polaris analyze -w
  
