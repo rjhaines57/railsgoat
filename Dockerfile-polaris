@@ -5,3 +5,5 @@ RUN apt-get update -q && apt-get install -q -y --no-install-recommends wget ca-c
 RUN wget -q $POLARIS_SERVER_URL/api/tools/polaris_cli-linux64.zip && \
       unzip -j polaris_cli-linux64.zip -d /usr/bin && rm polaris_cli-linux64.zip
 RUN polaris install
+WORKDIR /app
+COPY . .
