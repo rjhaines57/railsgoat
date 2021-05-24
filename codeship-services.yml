@@ -1,4 +1,4 @@
-codeship_example:
+polaris:
   build:
     image: polaris
     dockerfile: Dockerfile-polaris
