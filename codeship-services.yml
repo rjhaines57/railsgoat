@@ -1,0 +1,6 @@
+codeship_example:
+  build:
+    image: polaris
+    dockerfile: Dockerfile-polaris
+  environment:
+    EXAMPLE_ENV_VAR: example-var

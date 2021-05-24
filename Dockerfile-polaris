@@ -1,0 +1,7 @@
+FROM ubuntu:latest
+ENV POLARIS_SERVER_URL=https://sipse.polaris.synopsys.com
+ENV POLARIS_ACCESS_TOKEN=j172qat12h4hv3koia31i8902gqmj7mn1c577vu3fc5i7t7andm0
+RUN apt-get update -q && apt-get install -q -y --no-install-recommends wget ca-certificates unzip
+RUN wget -q $POLARIS_SERVER_URL/api/tools/polaris_cli-linux64.zip && \
+      unzip -j polaris_cli-linux64.zip -d /usr/bin && rm polaris_cli-linux64.zip
+RUN polaris install
